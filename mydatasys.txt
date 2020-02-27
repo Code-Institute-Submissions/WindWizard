@@ -1,0 +1,3 @@
+I will collect my recived data and save it in a general system/matix
+
+[day, time, temp, weather-description windspeed, wind-degree, wind-gust, swell-height, water-temp]
