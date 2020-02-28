@@ -11,6 +11,7 @@
 
 3 Display data in a more efficient manner
     - create a card or similar that can be replicated for multiple apis
+    - decide on 
 
 4 Improve input method
     - add gmap (get key limit access)
