@@ -11,7 +11,9 @@
 
 3 Display data in a more efficient manner
     - create a card or similar that can be replicated for multiple apis
-    - decide on 
+    - make card creating method ?
+    - decide on changeing data structure to 3 dimensional? [day[hour[data], hour, hour] ,day, day] etc?
+    - decide on wind units kts/m/s
 
 4 Improve input method
     - add gmap (get key limit access)
