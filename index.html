@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
-    <script src="assets/keys/keys.js"></script>
-    <script src="assets/js/worldWeatherOnline.js"></script>
-    <title>WindWizard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <script src="assets/keys/keys.js"></script>
+  <script src="assets/js/worldWeatherOnline.js"></script>
+  <title>WindWizard</title>
 </head>
+
 <body>
-    <H2>WINDWIZARD!</H2>
-    <p id="weatherDisplay">
-      <table id="weatherTable">
-        <tr>
-          <th>Day</th>
-          <th>Time</th>
-          <th>Temperature (c)</th>
-          <th>Weather description</th>
-          <th>Precipitation</th> 
-          <th>Windspeed</th> 
-          <th>Wind direction</th>
-          <th>Wind gust</th>
-          <th>Swell height</th>
-          <th>water-temp</th>
-        </tr>
-      </table>
-    </p>
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <H2>WINDWIZARD!</H2>
+  <label for="spot">Latitude,Longitude</label>
+  <input type="text" id="lat-long" name="spot" required>
+  <input type="button" value="Get Forecast" id="forecast"/>
+  
+  <table id="weatherTable">
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Temperature (c)</th>
+      <th>Weather description</th>
+      <th>Precipitation</th>
+      <th>Windspeed</th>
+      <th>Wind direction</th>
+      <th>Wind gust</th>
+      <th>Swell height</th>
+      <th>water-temp</th>
+    </tr>
+  </table>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
+
 </html>

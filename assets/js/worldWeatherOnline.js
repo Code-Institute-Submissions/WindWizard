@@ -6,9 +6,13 @@ var wWOData = new weatherDataMatrix();
 
 document.addEventListener("DOMContentLoaded", function () {
     var test = new inputBuilder("48.834,2.394"); /* Hardcode location */
-    JSONP_MarineWeather(test);
-    console.log(wWOData)
-
+    $("#forecast").click(function(){
+        var location = $("#lat-long").val();
+        var input = new inputBuilder(location);
+        JSONP_MarineWeather(input);
+        wWOData.display();
+    }); 
+    // JSONP_MarineWeather(test);
 });
 
 
@@ -28,7 +32,6 @@ function jsonP(url, callback) {
         dataType: 'jsonp',
         success: function (json) {
             console.dir('success');
-            console.log(json.data.weather);
             var i;
             var j;
             for (i = 0; i < json.data.weather.length; i++) {
