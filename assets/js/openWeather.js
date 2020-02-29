@@ -7,4 +7,3 @@ function JSONP_openWeather(input) {
 
 
 
-

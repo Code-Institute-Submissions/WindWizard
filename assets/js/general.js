@@ -2,12 +2,21 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     //var test = new inputBuilder("48.834,2.394"); /* Hardcode location */
-    $("#forecast").click(function(){
-        var location = $("#lat-long").val();
-        var input = new inputBuilder(location);
-        JSONP_MarineWeather(input);
-        wWOData.display();
-    }); 
+    $("#forecast").click(function () {
+        if ($('#source').value == 1 ){
+            var location = $("#lat-long").val();
+            var input = new inputBuilder(location);
+            JSONP_MarineWeather(input);
+            wWOData.display();}
+        else if ($('#source').value = 2)  {
+            var location = $("#lat-long").val();
+            var input = new inputBuilder(location);
+            JSONP_openWeather(input);
+            oWData.display();
+
+        }
+
+    });
     // JSONP_MarineWeather(test);
 });
 
@@ -26,7 +35,7 @@ function weatherDataMatrix() {
     this.add = function (day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp) {
         this.data.push([day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp]);
     };
-   /*  this method loops throght the weather data matric object and adds the data to a html table */
+    /*  this method loops throght the weather data matric object and adds the data to a html table */
     this.display = function () {
         for (i = 1; i < this.data.length; i++) {
             var table = document.getElementById("weatherTable");
@@ -34,7 +43,7 @@ function weatherDataMatrix() {
             for (j = 0; j < this.data[i].length; j++) {
                 var cell = row.insertCell(j);
                 cell.innerHTML = this.data[i][j];
-                
+
             };
         };
     };

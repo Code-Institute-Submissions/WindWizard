@@ -12,6 +12,8 @@ function inputBuilder(place) {
     this.format = "json";
     this.fx = 'yes';
     this.callback;
+    this.lat = place.split(',')[0];
+    this.lat = place.split(',')[1];
 };
 
 /* this function is based on example in WWO documentation and then modified to assemble the relevant data into a weatherDataMatrix object */
