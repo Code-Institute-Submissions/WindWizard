@@ -5,3 +5,9 @@ This is an educational project, learning and improving understanding about worki
  so there may be shortcuts to a working page that will be overlooked in the intrest of understanding and practicing.
 The goal of this project then, is to build a site that looks good and allows the user to check out weatherdata from multiple sources on one page.
 The data will be collected using apis and displayed using graphs and maps. 
+
+## APIS:
+#### World Weather Online
+#### Open Weather
+Open weather is a weather api that offers 500 calls to thier basic apis for free.
+(Main site)[https://openweathermap.org/]

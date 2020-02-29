@@ -3,17 +3,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     //var test = new inputBuilder("48.834,2.394"); /* Hardcode location */
     $("#forecast").click(function () {
-        if ($('#source').value == 1 ){
+        if ($("#source").children("option:selected").val() == 1 ){
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
             JSONP_MarineWeather(input);
             wWOData.display();}
-        else if ($('#source').value = 2)  {
+        else if ($("#source").children("option:selected").val() == 2)  {
+            console.log("dumheter");
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
             JSONP_openWeather(input);
             oWData.display();
-
         }
 
     });
