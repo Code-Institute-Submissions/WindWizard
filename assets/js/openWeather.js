@@ -16,10 +16,21 @@ function jsonP1(url, callback) {
         dataType: 'jsonp',
         success: function (json) {
             console.dir('success');
-            console.log(json.list[0]);
-            var i;
-            for (i = 0; i<json.list.length; i++ );{
-                oWData.add(json.list[i].dt_txt.split(' ')[0],json.list[i].dt_txt.split(' ')[1], json.list[i].main.temp-273, json.list[i].weather[0].toString(), json.list[i].rain. );
+            console.log(json.list)
+            console.log(json.list[0].dt_txt.split(" ")[0], json.list[0].valueOf().dt_txt.split(" ")[1], json.list[0].valueOf().main.temp - 273,
+            json.list[0].valueOf().weather[0].description, json.list[0].valueOf().rain, json.list[0].valueOf().wind.speed, json.list[0].valueOf().wind.deg,
+            "no data", "no data", "no data");
+            var i = 0;
+            for (i = 0; i < json.list.length; i++) {
+                if (json.list[i].valueOf().rain !== "undefined") {
+                    oWData.add(json.list[i].valueOf().dt_txt.split(" ")[0], json.list[i].valueOf().dt_txt.split(" ")[1], json.list[i].valueOf().main.temp - 273,
+                    json.list[i].valueOf().weather[0].description, json.list[i].valueOf().rain, json.list[i].valueOf().wind.speed, json.list[i].wind.valueOf().deg,
+                        "no data", "no data", "no data");
+                }else {
+                    oWData.add(json.list[i].valueOf().dt_txt.split(" ")[0], json.list[i].valueOf().dt_txt.split(" ")[1], json.list[i].valueOf().main.temp - 273,
+                    json.list[0].valueOf().weather[0].description, "0", json.list[i].valueOf().wind.speed, json.list[i].valueOf().wind.deg,
+                        "no data", "no data", "no data");
+                };
             };
         },
         error: function (e) {
