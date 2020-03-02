@@ -1,0 +1,11 @@
+
+/* Styling weather cards for small screens */
+.card {
+min-width:320px;
+}
+.card-body{
+    padding: 0;
+}
+.weather-card-box{
+    margin: auto;
+}

@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   <script src="assets/keys/keys.js"></script>
   <script src="assets/js/general.js"></script>
@@ -16,13 +18,13 @@
   <H2>WINDWIZARD!</H2>
   <label for="spot">Latitude,Longitude</label>
   <input type="text" id="lat-long" name="spot" required>
-  <input type="button" value="Get Forecast" id="forecast"/>
+  <input type="button" value="Get Forecast" id="forecast" />
   <select id="source">
     <option value="1">WorldWeatherOnline</option>
     <option value="2">OpenWeather</option>
 
   </select>
-  
+
   <table id="weatherTable">
     <tr>
       <th>Day</th>
@@ -37,6 +39,18 @@
       <th>water-temp</th>
     </tr>
   </table>
+  <div class="card">
+    <div class="card-body">
+      <div class="row no-gutters">
+        <div class="col-xs-1 weather-card-box">00</div>
+        <div class="col-xs-2 weather-card-box">279</div>
+        <div class="col-xs-3 weather-card-box">20 kts <br> 30 kts</div>
+        <div class="col-xs-3 weather-card-box">light rain <br> 2 mm</div>
+        <div class="col-xs-1 weather-card-box">15 C</div>
+        <div class="col-xs-2 weather-card-box">1.5 M</div>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
