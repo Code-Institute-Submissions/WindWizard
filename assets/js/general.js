@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Class to asaseble and store the relevant data that has been picked out from api raw data */
 function weatherDataMatrix() {
     this.data = [
-        ['day', 'time', 'temp', 'weather-description', 'precipitation', 'windspeed', 'wind-degree', 'wind-gust', 'swell-height', 'water-temp']
+        ['day', 'time', 'temp', 'weather-description', 'precipitation', 'windspeed', 'wind-degree', 'wind-gust', 'swell-height', 'water-temp', 'imgurl']
     ];
     this.cards = "";
     /* this method is used to add another row of weather data to the array */
-    this.add = function (day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp) {
-        this.data.push([day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp]);
+    this.add = function (day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp, imgurl) {
+        this.data.push([day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp, imgurl]);
     };
     /*  this method loops throght the weather data matric object and adds the data to a html table */
     this.display = function () {
@@ -73,7 +73,7 @@ function weatherDataMatrix() {
                 <div class="col-xs-1 weather-card-box">${this.data[i][1]}</div>
                 <div class="col-xs-2 weather-card-box">${this.data[i][6]}</div>
                 <div class="col-xs-3 weather-card-box">${this.data[i][5]}<br>${this.data[i][7]}</div>
-                <div class="col-xs-3 weather-card-box">${this.data[i][3]}<br> ${this.data[i][4]} mm</div>
+                <div class="col-xs-3 weather-card-box"><img class="weather-icon" src="${this.data[i][10]}"/><br> ${this.data[i][4]} mm</div>
                 <div class="col-xs-1 weather-card-box">${this.data[i][2]} C</div>
                 <div class="col-xs-2 weather-card-box">${this.data[i][9]} M</div>
               </div>

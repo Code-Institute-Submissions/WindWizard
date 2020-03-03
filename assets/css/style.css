@@ -13,3 +13,7 @@ min-width:320px;
 .weather-decription-box{
     margin: auto;
 }
+.weather-icon{
+    height: 20px;
+    width: 20px;
+}

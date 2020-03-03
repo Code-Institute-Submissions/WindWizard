@@ -34,7 +34,7 @@ function jsonP(url, callback) {
                 for (j = 0; j < json.data.weather[i].hourly.length; j++) {
                     wWOData.add(json.data.weather[i].date, json.data.weather[i].hourly[j].time, json.data.weather[i].hourly[j].tempC, json.data.weather[i].hourly[j].weatherDesc[0].value,
                         json.data.weather[i].hourly[j].precipMM, json.data.weather[i].hourly[j].windspeedKmph, json.data.weather[i].hourly[j].winddirDegree, json.data.weather[i].hourly[j].WindGustKmph,
-                        json.data.weather[i].hourly[j].swellHeight_m, json.data.weather[i].hourly[j].waterTemp_C);
+                        json.data.weather[i].hourly[j].swellHeight_m, json.data.weather[i].hourly[j].waterTemp_C, json.data.weather[i].hourly[j].weatherIconUrl[0].value);
                 };
             };
         },
