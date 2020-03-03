@@ -23,13 +23,13 @@ function jsonP1(url, callback) {
             var i = 0;
             for (i = 0; i < json.list.length; i++) {
                 if (json.list[i].valueOf().rain !== "undefined") {
-                    oWData.add(json.list[i].valueOf().dt_txt.split(" ")[0], json.list[i].valueOf().dt_txt.split(" ")[1], json.list[i].valueOf().main.temp - 273,
+                    oWData.add(json.list[i].valueOf().dt_txt.split(" ")[0], json.list[i].valueOf().dt_txt.split(" ")[1], Math.round(json.list[i].valueOf().main.temp - 273),
                     json.list[i].valueOf().weather[0].description, json.list[i].valueOf().rain, json.list[i].valueOf().wind.speed, json.list[i].wind.valueOf().deg,
-                        "no data", "no data", "no data");
+                        "no data", "no data", "no data", "http://openweathermap.org/img/wn/" + json.list[i].weather[0].icon + "@2x.png");
                 }else {
                     oWData.add(json.list[i].valueOf().dt_txt.split(" ")[0], json.list[i].valueOf().dt_txt.split(" ")[1], json.list[i].valueOf().main.temp - 273,
                     json.list[0].valueOf().weather[0].description, "0", json.list[i].valueOf().wind.speed, json.list[i].valueOf().wind.deg,
-                        "no data", "no data", "no data");
+                        "no data", "no data", "no data", json.list[i].weather[0].icon + "@2x.png");
                 };
             };
         },

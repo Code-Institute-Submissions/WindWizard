@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
     $("#display-forecast").click(function(){
-        $.when(wWOData.generateCards()).then(wWOData.display());
+        
+        if ($("#source").children("option:selected").val() == 1) {
+            $.when(wWOData.generateCards()).then(wWOData.display());
+        }
+        else if ($("#source").children("option:selected").val() == 2) {
+            $.when(oWData.generateCards()).then(oWData.display());
+        };
     });
     // JSONP_MarineWeather(test);
 });
