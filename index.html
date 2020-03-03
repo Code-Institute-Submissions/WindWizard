@@ -17,14 +17,13 @@
 <body>
   <H2>WINDWIZARD!</H2>
   <label for="spot">Latitude,Longitude</label>
-  <input type="text" id="lat-long" name="spot" placeholder="Lat,Long" required>
-  <input type="button" value="Get Forecast" id="forecast" />
+  <input type="text" id="lat-long" name="spot" placeholder="Lat,Long" required> 
   <select id="source">
     <option value="1">WorldWeatherOnline</option>
     <option value="2">OpenWeather</option>
-
   </select>
-
+  <input type="button" value="Get Forecast" id="forecast" />
+  <input type="button" value="Display Forecast" id="display-forecast" /> 
   <table id="weatherTable">
     <tr>
       <th>Day</th>
@@ -39,6 +38,9 @@
       <th>water-temp</th>
     </tr>
   </table>
+  <div id="card-container">
+
+  </div>
   <div class="card">
     <div class="card-header">2/3-2020</div>
     <div class="row no-gutters">
