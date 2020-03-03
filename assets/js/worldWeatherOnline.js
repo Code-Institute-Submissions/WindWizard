@@ -27,6 +27,7 @@ function jsonP(url, callback) {
         dataType: 'jsonp',
         success: function (json) {
             console.dir('success');
+            console.log(json.data);
             var i;
             var j;
             for (i = 0; i < json.data.weather.length; i++) {

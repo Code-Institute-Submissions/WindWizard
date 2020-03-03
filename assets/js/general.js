@@ -7,18 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
             JSONP_MarineWeather(input);
-            /* $.when(JSONP_MarineWeather(input)).then(wWOData.generateCards()); */
+            /* $.when(JSONP_MarineWeather(input)).then(wWOData.generateCards()).then(wWOData.display()); */
         }
         else if ($("#source").children("option:selected").val() == 2) {
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
             JSONP_openWeather(input);
-            oWData.display();
-        }
+        };
 
     });
     $("#display-forecast").click(function(){
-        console.log("hej");
         $.when(wWOData.generateCards()).then(wWOData.display());
     });
     // JSONP_MarineWeather(test);
@@ -35,7 +33,7 @@ function weatherDataMatrix() {
     this.data = [
         ['day', 'time', 'temp', 'weather-description', 'precipitation', 'windspeed', 'wind-degree', 'wind-gust', 'swell-height', 'water-temp']
     ];
-    this.cards;
+    this.cards = "";
     /* this method is used to add another row of weather data to the array */
     this.add = function (day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp) {
         this.data.push([day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp]);
@@ -55,11 +53,10 @@ function weatherDataMatrix() {
     this.generateCards = function () {
         var day = this.data[0][0];
         var i;
-        for (i = 1; i < this.data.length; i++)
-            if (this.data[i][0] !== day);{
-                console.log(this.data[i][0]);
+        for (i = 1; i < this.data.length; i++){
+            if (this.data[i][0] !== day){
                 day = this.data[i][0];
-                this.cards.append(`<div class="card">
+                this.cards = this.cards + `<div class="card">
                 <div class="card-header">${this.data[i][0]}</div>
                 <div class="row no-gutters">
                   <div class="col-xs-3 weather-decription-box">Time</div>
@@ -67,9 +64,10 @@ function weatherDataMatrix() {
                   <div class="col-xs-3 weather-decription-box">Weather</div>
                   <div class="col-xs-3 weather-decription-box">Waves</div>
                   </div>
-                </div>`)
+                </div>
+                </div>`;
             };
-            this.cards.append(`<div class="card">
+            this.cards = this.cards + `<div class="card">
             <div class="card-body">
               <div class="row no-gutters">
                 <div class="col-xs-1 weather-card-box">${this.data[i][1]}</div>
@@ -79,9 +77,9 @@ function weatherDataMatrix() {
                 <div class="col-xs-1 weather-card-box">${this.data[i][2]} C</div>
                 <div class="col-xs-2 weather-card-box">${this.data[i][9]} M</div>
               </div>
-            </div>`);
-
-        
+            </div>
+            </div>`;
+        };
 
     };
 };
