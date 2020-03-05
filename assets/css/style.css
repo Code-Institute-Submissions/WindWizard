@@ -17,3 +17,7 @@ min-width:320px;
     height: 40px;
     width: 40px;
 }
+#map-div{
+    height: 500px;
+    width: 500 px;
+}

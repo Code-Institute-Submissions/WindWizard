@@ -66,7 +66,7 @@ function weatherDataMatrix() {
                 <div class="card-header">${this.data[i][0]}</div>
                 <div class="row no-gutters">
                   <div class="col-xs-3 weather-decription-box">Time</div>
-                  <div class="col-xs-3 weather-decription-box">Wind</div>
+                  <div class="col-xs-3 weather-decription-box">Wind m/s</div>
                   <div class="col-xs-3 weather-decription-box">Weather</div>
                   <div class="col-xs-3 weather-decription-box">Waves</div>
                   </div>
