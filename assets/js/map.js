@@ -1,15 +1,30 @@
-var map;
+
+document.addEventListener("DOMContentLoaded", function () {
+    var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById("map-div"), {
         zoom: 3,
         center: {
             lat: 50,
-            lng: 50
+            lng: 0
+        },
+        streetViewControl: false,
+        mapTypeControlOptions: {
+            mapTypeIds: ['mywindlayer']
         }
     });
+    var imgMapLayer = new google.maps.ImageMapType({
+        gettileurl: getTile(),
+        tileSize: new google.maps.Size(256, 256),
+        maxZoom: 9,
+        minZoom: 0,
+        name: 'mywindlayer',
+    });
+    map.mapTypes.set('mywindlayer', imgMapLayer);
+    map.setMapTypeId('mywindlayer');
 };
-document.addEventListener("DOMContentLoaded", function () {
-    var infowindow = new google.maps.InfoWindow();
+
+/*     var infowindow = new google.maps.InfoWindow();
     google.maps.event.addListener(map, 'idle', checkIfDataRequested);
     map.data.addListener("click", function (event) {
         infowindow.setContent("hej hopp")
@@ -24,15 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-    });
+    }); */
+    // the following functions were adapted from
+    // https://developers.google.com/maps/documentation/javascript/examples/map-coordinates
     var TILE_SIZE = 256;
     function getTile() {
         var scale = 1 << map.getZoom();
-        var worldCords = project();
+        var worldCoords = project();
         var tileCoordinate = new google.maps.Point(
             Math.floor(worldCoords.x * scale / TILE_SIZE),
             Math.floor(worldCoords.y * scale / TILE_SIZE));
-        getWindLayer(tileCoordinate);
+        windLayerURL = getWindLayer(tileCoordinate);
+        return windLayerURL;
     }
 
     function project() {
@@ -47,7 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
             TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)));
     }
     function getWindLayer(tilecords) {
-        url = "https://tile.openweathermap.org/map/wind_new/" + map.getZoom() + "/" + tilecords.x + "/" + tilecords.y + ".png?appid=" + owkey;
-
+        var windmapurl = "https://tile.openweathermap.org/map/wind_new/" + map.getZoom() + "/" + tilecords.x + "/" + tilecords.y + ".png?appid=" + owkey;
+        console.log(windmapurl);
+        return windmapurl;
     }
+    
+    
+    initMap()
+
+    /* map.overlayMapTypes.insertAt(0, imgMapLayer) */
 })
