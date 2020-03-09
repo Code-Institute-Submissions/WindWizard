@@ -1,4 +1,4 @@
-var openweather_baseurl = "https://api.openweathermap.org/data/2.5/"
+const openweather_baseurl = "https://api.openweathermap.org/data/2.5/"
 var oWData = new weatherDataMatrix();
 
 function JSONP_openWeather(input) {
