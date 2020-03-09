@@ -1,21 +1,10 @@
 var map;
 function initMap() {
-    map = new google.maps.Map(document.getElementById("map-div"), {
-        zoom: 3,
-        center: {
-            lat: 50,
-            lng: 0
-        },
-        streetViewControl: false,
-        mapTypeControlOptions: {
-            mapTypeIds: ['mywindlayer']
-        }
-    });
-};
-function initMap() {
     var map = new google.maps.Map(document.getElementById("map-div"), {
-        center: { lat: 0, lng: 0 },
-        zoom: 1,
+        zoom: 3,
+        center: { lat: 0,
+                  lng: 0 
+                },
         streetViewControl: false,
         mapTypeControlOptions: {
             mapTypeIds: ['mywindlayer']
@@ -29,19 +18,19 @@ function initMap() {
                 return null;
             }
             var bound = Math.pow(2, zoom);
-            return '//mw1.google.com/mw-planetary/lunar/lunarmaps_v1/clem_bw' +
-                '/' + zoom + '/' + normalizedCoord.x + '/' +
-                (bound - normalizedCoord.y - 1) + '.jpg';
+            return "https://tile.openweathermap.org/map/wind_new/" +
+                "/" + zoom + "/" + normalizedCoord.x + '/' +
+                (bound - normalizedCoord.y - 1) + ".png?appid=" + owkey;
         },
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 9,
         minZoom: 0,
         radius: 1738000,
-        name: 'Moon'
+        name: 'mywindlayer'
     });
 
-    map.mapTypes.set('moon', moonMapType);
-    map.setMapTypeId('moon');
+    map.mapTypes.set('mywindlayer', windMapType);
+    map.setMapTypeId('mywindlayer');
 }
 
 // Normalizes the coords that tiles repeat across the x axis (horizontally)

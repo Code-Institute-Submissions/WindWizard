@@ -1,4 +1,4 @@
-var baseURL = 'https://api.worldweatheronline.com/premium/v1/';
+const baseURL = 'https://api.worldweatheronline.com/premium/v1/';
 var wWOData = new weatherDataMatrix();
 
 function JSONP_MarineWeather(input) {

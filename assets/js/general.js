@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
             JSONP_MarineWeather(input);
+            $.when(wWOData.generateCards()).then(wWOData.display());
             /* $.when(JSONP_MarineWeather(input)).then(wWOData.generateCards()).then(wWOData.display()); */
         }
         else if ($("#source").children("option:selected").val() == 2) {
