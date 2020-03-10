@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   <script src="assets/js/map4.js"></script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wM4-2r7MrpRZsGlXT8LgdSC5i--zUvo&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wM4-2r7MrpRZsGlXT8LgdSC5i--zUvo&libraries=places&callback=initMap"></script>
   <title>WindWizard</title>
 </head>
 
@@ -34,6 +34,11 @@
     <div id="favorites" class="col-md-3">
       <h2>Our favorites</h2>
 
+    </div>
+    <div class="pac-card" id="pac-card">
+      <div id="pac-container">
+        <input id="pac-input" type="text" placeholder="Enter a location">
+      </div>
     </div>
     <div id="map-div" class="col-md-6">
 
