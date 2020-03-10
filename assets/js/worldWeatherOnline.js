@@ -1,20 +1,11 @@
 const baseURL = 'https://api.worldweatheronline.com/premium/v1/';
-var wWOData = new weatherDataMatrix();
 
 function JSONP_MarineWeather(input, dataObject) {
     var url = baseURL + "marine.ashx?q=" + input.query + "&format=" + input.format + "&key=" + wwokey;
 
     jsonP(url, input.callback, dataObject);
 }
-/*function to build request input */
-function inputBuilder(place) {
-    this.query = place;
-    this.format = "json";
-    this.fx = 'yes';
-    this.callback;
-    this.lat = place.split(',')[0];
-    this.long = place.split(',')[1];
-};
+
 
 /* this function is based on example in WWO documentation and then modified to assemble the relevant data into a weatherDataMatrix object */
 function jsonP(url, callback, dataObject) {

@@ -1,9 +1,4 @@
-/* const favoriteSpots = [["Flag Beach, Fuerteventura:28.722934, -13.842284"]
-    ["Boaracay, Philipines:11.962909, 121.922640"]
-    ["Tarifa, Spain:36.033622,-5.628624"]
-    ["Capetown, South Afrika:-33.831068, 18.481157"]
-    ["Jericoacoara, Brazil:-2.793534, -40.520493"]]
- */
+
 document.addEventListener("DOMContentLoaded", function () {
     //var test = new inputBuilder("48.834,2.394"); /* Hardcode location */
 
@@ -23,23 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
     });
-    $("#display-forecast").click(function(){
-        
-        if ($("#source").children("option:selected").val() == 1) {
-            $.when(wWOData.generateCards()).then(wWOData.display());
-        }
-        else if ($("#source").children("option:selected").val() == 2) {
-            $.when(oWData.generateCards()).then(oWData.display());
-        };
-    });
-    // JSONP_MarineWeather(test);
 });
 
-
-
-
-
-
+/*function to build request input */
+function inputBuilder(place) {
+    this.query = place;
+    this.format = "json";
+    this.fx = 'yes';
+    this.callback;
+    this.lat = place.split(',')[0];
+    this.long = place.split(',')[1];
+};
 
 /* Class to asaseble and store the relevant data that has been picked out from api raw data */
 function weatherDataMatrix() {
@@ -58,7 +47,7 @@ function weatherDataMatrix() {
             var table = document.getElementById("weatherTable");
             var row = table.insertRow(i);
             for (j = 0; j < this.data[i].length; j++) {
-                var cell = row.insertCell(j);
+                var cell = row.insertCell(j); 
                 cell.innerHTML = this.data[i][j];
             };
         }; */
