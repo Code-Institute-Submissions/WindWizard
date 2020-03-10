@@ -28,7 +28,7 @@ function initMap() {
     map.overlayMapTypes.insertAt(
         0, new CoordMapType(new google.maps.Size(256, 256)));
 
-    map.addListener('click', function(){
-        var marker = new
+    map.addListener('click', function(e){
+       $('#lat-long').val(e.latLng.lat() + "," + e.latLng.lng());
     });
 }
