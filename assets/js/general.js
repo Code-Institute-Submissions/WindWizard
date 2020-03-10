@@ -1,19 +1,25 @@
-
-
+/* const favoriteSpots = [["Flag Beach, Fuerteventura:28.722934, -13.842284"]
+    ["Boaracay, Philipines:11.962909, 121.922640"]
+    ["Tarifa, Spain:36.033622,-5.628624"]
+    ["Capetown, South Afrika:-33.831068, 18.481157"]
+    ["Jericoacoara, Brazil:-2.793534, -40.520493"]]
+ */
 document.addEventListener("DOMContentLoaded", function () {
     //var test = new inputBuilder("48.834,2.394"); /* Hardcode location */
+
     $("#forecast").click(function () {
         if ($("#source").children("option:selected").val() == 1) {
+            var worldWeatherOnlineData = new weatherDataMatrix;
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
-            JSONP_MarineWeather(input);
-            $.when(wWOData.generateCards()).then(wWOData.display());
-            /* $.when(JSONP_MarineWeather(input)).then(wWOData.generateCards()).then(wWOData.display()); */
+            JSONP_MarineWeather(input, worldWeatherOnlineData);
+           
         }
         else if ($("#source").children("option:selected").val() == 2) {
+            var openWeatherData = new weatherDataMatrix;
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
-            JSONP_openWeather(input);
+            JSONP_openWeather(input, openWeatherData);
         };
 
     });
