@@ -1,11 +1,15 @@
 const openweather_baseurl = "https://api.openweathermap.org/data/2.5/"
-
+/* Function that assembles the api call url and calls the jsonP1 function */
 function JSONP_openWeather(input, dataObject) {
     var url = openweather_baseurl + "forecast?lat=" + input.lat + "&lon=" + input.long + "&appid=" + owkey;
     jsonP1(url, input.callback, dataObject);
 }
 
-/* function JSONP_openWeather_current(input) */
+/* Function to sort recived data into a weatherdatamatrix object.
+Inputs 
+weather: weatherdata recived from worldweatheronline API
+dataObject: a empty weatherdatamatrix object.
+  */
 function sortOpenWeatherData(weather ,dataObject){
     var i = 0;
     for (i = 0; i < weather.length; i++) { 
@@ -26,7 +30,9 @@ function sortOpenWeatherData(weather ,dataObject){
         };
     };
 }
-
+/*  this function is based on example in WWO documentation and then modified to 
+call function sortWorldWeatherOnlineData to sort relevant information recived from the api call 
+into a weatherdatamatric object, and then use the ojects methods to generate cards and display them in the DOM */
 function jsonP1(url, callback, dataObject) {
     $.ajax({
         type: 'GET',
@@ -37,7 +43,6 @@ function jsonP1(url, callback, dataObject) {
         dataType: 'jsonp',
         success: function (json) {
             sortOpenWeatherData(json.list ,dataObject);
-          
             dataObject.generateCards();
             dataObject.display();
         },
