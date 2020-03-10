@@ -5,9 +5,26 @@ function JSONP_MarineWeather(input, dataObject) {
 
     jsonP(url, input.callback, dataObject);
 }
+/* Function to sort recived data into a weatherdatamatrix object.
+Inputs 
+weather: weatherdata recived from worldweatheronline API
+dataObject: a empty weatherdatamatrix object.
+  */
+function sortWorldWeatherOnlineData(weather ,dataObject){
+    var i;
+    var j;
+    for (i = 0; i < weather.length; i++) {
+        for (j = 0; j < weather[i].hourly.length; j++) {
+            dataObject.add(weather[i].date, weather[i].hourly[j].time, weather[i].hourly[j].tempC, weather[i].hourly[j].weatherDesc[0].value,
+                weather[i].hourly[j].precipMM, Math.round(weather[i].hourly[j].windspeedKmph / 3.6), weather[i].hourly[j].winddirDegree, Math.round(weather[i].hourly[j].WindGustKmph / 3.6),
+                weather[i].hourly[j].swellHeight_m, weather[i].hourly[j].waterTemp_C, weather[i].hourly[j].weatherIconUrl[0].value);
+        };
+    };
+}
 
-
-/* this function is based on example in WWO documentation and then modified to assemble the relevant data into a weatherDataMatrix object */
+/* this function is based on example in WWO documentation and then modified to 
+call function sortWorldWeatherOnlineData to sort relevant information recived from the api call 
+into a weatherdatamatric object, and then use the ojects methods to generate cards and display them in the DOM */
 function jsonP(url, callback, dataObject) {
     $.ajax({
         type: 'GET',
@@ -17,17 +34,7 @@ function jsonP(url, callback, dataObject) {
         jsonpCallback: callback,
         dataType: 'jsonp',
         success: function (json) {
-            console.dir('success');
-            console.log(json.data);
-            var i;
-            var j;
-            for (i = 0; i < json.data.weather.length; i++) {
-                for (j = 0; j < json.data.weather[i].hourly.length; j++) {
-                    dataObject.add(json.data.weather[i].date, json.data.weather[i].hourly[j].time, json.data.weather[i].hourly[j].tempC, json.data.weather[i].hourly[j].weatherDesc[0].value,
-                        json.data.weather[i].hourly[j].precipMM, Math.round(json.data.weather[i].hourly[j].windspeedKmph / 3.6), json.data.weather[i].hourly[j].winddirDegree, Math.round(json.data.weather[i].hourly[j].WindGustKmph / 3.6),
-                        json.data.weather[i].hourly[j].swellHeight_m, json.data.weather[i].hourly[j].waterTemp_C, json.data.weather[i].hourly[j].weatherIconUrl[0].value);
-                };
-            };
+            sortWorldWeatherOnlineData(json.data.weather, dataObject);
             dataObject.generateCards();
             dataObject.display();
         },
