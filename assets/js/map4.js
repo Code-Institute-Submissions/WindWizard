@@ -18,7 +18,8 @@ function initMap() {
         center: {
             lat: 41.850,
             lng: -7.650
-        }
+        },
+        mapTypeControl: false
     });
     // Insert this overlay map type as the first overlay map type at
     // position 0. Note that all overlay map types appear on top of
@@ -31,7 +32,7 @@ function initMap() {
     });
     var card = document.getElementById('pac-card');
     var input = document.getElementById('pac-input');
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
     var autocomplete = new google.maps.places.Autocomplete(input);
     var marker = new google.maps.Marker({
         map: map,
@@ -40,7 +41,6 @@ function initMap() {
     autocomplete.addListener('place_changed', function () {
         marker.setVisible(false);
         var place = autocomplete.getPlace();
-
         // If the place has a geometry, then present it on a map.
         if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
@@ -50,6 +50,18 @@ function initMap() {
         }
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
-
+        if ($("#source").children("option:selected").val() == 1) {
+            var worldWeatherOnlineData = new weatherDataMatrix;
+            var location = place.geometry.location.lat() + "," + place.geometry.location.lng();
+            var input = new inputBuilder(location);
+            JSONP_MarineWeather(input, worldWeatherOnlineData);
+           
+        }
+        else if ($("#source").children("option:selected").val() == 2) {
+            var openWeatherData = new weatherDataMatrix;
+            var location = place.geometry.location.lat() + "," + place.geometry.location.lng();
+            var input = new inputBuilder(location);
+            JSONP_openWeather(input, openWeatherData);
+        };
     });
 }
