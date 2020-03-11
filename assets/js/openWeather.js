@@ -44,12 +44,14 @@ function jsonP1(url, callback, dataObject) {
         dataType: 'jsonp',
         success: function (json) {
             sortOpenWeatherData(json.list ,dataObject);
+            
             dataObject.generateCards();
             dataObject.display();
         },
         error: function (e) {
             console.log(e.message);
         }
+        
     });
 }
 
