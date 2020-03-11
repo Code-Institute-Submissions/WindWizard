@@ -16,10 +16,10 @@ CoordMapType.prototype.getTile = function (coord, zoom, ownerDocument) {
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map-div'), {
-        zoom: 4,
+        zoom: 3,
         center: {
             lat: 41.850,
-            lng: -7.650
+            lng: -0.650
         },
         mapTypeControl: false
     });
