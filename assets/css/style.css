@@ -1,13 +1,22 @@
+body{
+    background-color: #5d737e;
+}
 
 /* Styling weather cards for small screens */
 .card {
 min-width:320px;
+
+}
+.card-header{
+    margin: auto;
 }
 .card-body{
     padding: 0;
+    background-color: #808080;
 }
 .weather-card-box{
     margin: auto;
+    font-weight: 500px;
 }
 
 .time-box{
@@ -32,6 +41,10 @@ min-width:320px;
 .day-conatiner{
     margin: 0;
     padding: 0;
+}    
+.day-conatiner .card{
+    background-color: #8a716a;
+
 }
 .pac-card {
     margin: 10px 10px 0 0;
