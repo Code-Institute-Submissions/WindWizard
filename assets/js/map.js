@@ -34,7 +34,7 @@ function initMap() {
     });
 
     // Add a Autocomplete search bar to the top left of the map, when a place is selected,
-    // the forecast for that location is collected and displayed
+    // the map zoomes in on it and the forecast for that location is collected and displayed
     var card = document.getElementById('pac-card');
     var input = document.getElementById('pac-input');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
