@@ -19,6 +19,7 @@ min-width:320px;
 }
 #map-div{
     height: 500px;
+    padding: 0px;
 }
 .day-conatiner{
     margin: 0;
@@ -39,9 +40,9 @@ min-width:320px;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
-    padding: 0 11px 0 13px;
+    padding: 5 11px 0 13px;
     text-overflow: ellipsis;
-    width: 300px;
+    width: 280px;
   }
   
   #pac-input:focus {
