@@ -66,7 +66,7 @@ function weatherDataMatrix() {
                 day = this.data[i][0];
                 this.cards += `</div>
                 <div class="day-container col-md-6 col-lg-4">
-                    <div class="card">
+                    <div class="card day-card">
                         <div class="card-header">${this.data[i][0]}</div>
                         <div class="row no-gutters">
                             <div class="col-xs-3 weather-decription-box">Time</div>

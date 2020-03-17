@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2|Roboto&display=swap');
 body{
-    background-color: #5d737e;
+    background-color: #B1C1C0;
+
+}
+.heading-box{
+    background-color: #5D737E;
+    color: #EF946C;
+    height: 80px;  
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 48px;
+}
+.day-card{
+    background-color: #AC80A0;
 }
 
 /* Styling weather cards for small screens */
 .card {
+font-family: 'Roboto', sans-serif;
 min-width:320px;
-
+border: #5D737E solid;
+border-width: 2px;
+border-radius: 5px;
 }
 .card-header{
     margin: auto;
+    font-weight: 600;
 }
 .card-body{
     padding: 0;
-    background-color: #808080;
+    background-color: #B1C1C0;
 }
 .weather-card-box{
     margin: auto;
@@ -20,7 +37,7 @@ min-width:320px;
 }
 
 .time-box{
-    min-width: 34.5px;
+    min-width: 35px;
 }
 
 .wind-dir-box{
@@ -35,6 +52,9 @@ min-width:320px;
     width: 40px;
 }
 #map-div{
+    border: 5px solid;
+    border-color: #5D737E;
+    border-radius: 10px;
     height: 500px;
     padding: 0px;
 }
@@ -55,8 +75,8 @@ min-width:320px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     
-  }
-  #pac-input {
+}
+#pac-input {
     background-color: #fff;
     font-family: Roboto;
     font-size: 15px;
@@ -64,9 +84,9 @@ min-width:320px;
     padding: 5 11px 0 13px;
     text-overflow: ellipsis;
     width: 270px;
-  }
+}
   
-  #pac-input:focus {
+#pac-input:focus {
     border-color: #4d90fe;
-  }
+}
   

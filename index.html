@@ -15,15 +15,10 @@
 </head>
 
 <body>
-  <H2>WINDWIZARD!</H2>
+  <div class="col-sm-12 heading-box">
+    WINDWIZARD!
+  </div>
 
-  <label for="spot">Latitude,Longitude</label>
-  <input type="text" id="lat-long" name="spot" placeholder="Lat,Long" required>
-  <select id="source">
-    <option value="1">WorldWeatherOnline</option>
-    <option value="2">OpenWeather</option>
-  </select>
-  <input type="button" value="Get Forecast" id="forecast" />
   <section class="container-lg">
     <p>Click the map to get Coordinates for a spot, Or Search for it in the searchbar below.</p>
     <div class="row">
@@ -36,7 +31,14 @@
       <div id="map-div" class="col-md-12">
 
       </div>
-
+      <div class="col-sm-12">
+        <label for="spot">Latitude,Longitude</label>
+        <input type="text" id="lat-long" name="spot" placeholder="Lat,Long" required>
+        <select id="source">
+          <option value="1">WorldWeatherOnline</option>
+          <option value="2">OpenWeather</option>
+        </select>
+        <input type="button" value="Get Forecast" id="forecast" /></div>
       <div id="card-container" class="row">
 
       </div>
