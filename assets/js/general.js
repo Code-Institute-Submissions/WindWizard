@@ -74,8 +74,8 @@ function weatherDataMatrix() {
             <div class="card">
                 <div class="card-body">
                     <div class="row no-gutters">
-                        <div class="col-xs-1 weather-card-box">${this.data[i][1]}</div>
-                        <div class="col-xs-2 weather-card-box">${this.data[i][6]}</div>
+                        <div class="col-xs-1 weather-card-box time-box">${this.data[i][1]}</div>
+                        <div class="col-xs-2 weather-card-box wind-dir-box">${this.data[i][6]}</div>
                         <div class="col-xs-3 weather-card-box">${this.data[i][5]}<br>${this.data[i][7]}</div>
                         <div class="col-xs-3 weather-card-box"><img class="weather-icon" src="${this.data[i][10]}"/><br> ${this.data[i][4]} mm</div>
                         <div class="col-xs-1 weather-card-box">${this.data[i][2]} C</div>

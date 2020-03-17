@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   <script src="assets/js/map.js"></script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wM4-2r7MrpRZsGlXT8LgdSC5i--zUvo&libraries=places&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wM4-2r7MrpRZsGlXT8LgdSC5i--zUvo&libraries=places&callback=initMap">
+  </script>
   <title>WindWizard</title>
 </head>
 
@@ -23,19 +24,24 @@
     <option value="2">OpenWeather</option>
   </select>
   <input type="button" value="Get Forecast" id="forecast" />
-  <div class="row">
-    <div class="pac-card" id="pac-card">
-      <div id="pac-container">
-        <input id="pac-input" type="text" placeholder="Enter a location">
+  <section class="container-lg">
+    <p>Click the map to get Coordinates for a spot, Or Search for it in the searchbar below.</p>
+    <div class="row">
+
+      <div class="pac-card" id="pac-card">
+        <div id="pac-container">
+          <input id="pac-input" type="text" placeholder="Enter a location">
+        </div>
+      </div>
+      <div id="map-div" class="col-md-12">
+
+      </div>
+
+      <div id="card-container" class="row">
+
       </div>
     </div>
-    <div id="map-div" class="col-md-8">
-
-    </div>
-    <div id="card-container" class="row">
-
-    </div>
-  </div>
+  </section>
   <script src="assets/keys/keys.js"></script>
   <script src="assets/js/general.js"></script>
   <script src="assets/js/worldWeatherOnline.js"></script>

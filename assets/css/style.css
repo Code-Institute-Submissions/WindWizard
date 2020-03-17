@@ -10,6 +10,14 @@ min-width:320px;
     margin: auto;
 }
 
+.time-box{
+    min-width: 34.5px;
+}
+
+.wind-dir-box{
+    min-width: 26px;
+}
+
 .weather-decription-box{
     margin: auto;
 }
@@ -42,7 +50,7 @@ min-width:320px;
     font-weight: 300;
     padding: 5 11px 0 13px;
     text-overflow: ellipsis;
-    width: 280px;
+    width: 270px;
   }
   
   #pac-input:focus {
