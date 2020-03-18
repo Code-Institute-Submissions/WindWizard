@@ -9,7 +9,7 @@ Inputs
 weather: weatherdata recived from worldweatheronline API
 dataObject: a empty weatherdatamatrix object.
   */
-function sortWorldWeatherOnlineData(weather ,dataObject){
+function sortWorldWeatherOnlineData(weather, dataObject) {
     var i;
     var j;
     for (i = 0; i < weather.length; i++) {
@@ -37,8 +37,9 @@ function jsonP(url, callback, dataObject) {
             dataObject.generateCards();
             dataObject.display();
         },
-        error: function (e) {
-            console.log(e.message);
+        error: function (xhr) {
+            var errorMessage = xhr.status + ': ' + xhr.statusText
+            alert('Error calling api for weatherforecast' + errorMessage);
         }
     });
 }

@@ -48,7 +48,7 @@ function jsonP1(url, callback, dataObject) {
             dataObject.generateCards();
             dataObject.display();
         },
-        error: function (xhr, status, error) {
+        error: function (xhr) {
             var errorMessage = xhr.status + ': ' + xhr.statusText
             alert('Error calling api for weatherforecast' + errorMessage);
         }
