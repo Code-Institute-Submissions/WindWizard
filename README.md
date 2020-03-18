@@ -35,6 +35,7 @@ The site featurs one single page with
 - Add favorite section, where previously searched locations get saved as a cookie and can diplayed. Since many surfers have one or a couple of good spots nearby, it would be usefull for the user to directly be able to get the forecast for their favorite spots so that they can choose where to go.
 - Add Current weather sections, where users can get live uppdates on what thw conditions currently are like at their favorite spots.
 - Add pins to the map for famous spots all around the world would help new surfers find spots to go to aswell as providing an easier way to find you favorite spot.
+- Add Feature where the user can drop a pin to the map and then get a small info window with the current weather conditions and a button to get forecast.
 
 ## APIS:
 #### World Weather Online

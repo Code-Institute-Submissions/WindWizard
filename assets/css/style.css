@@ -9,13 +9,17 @@ body{
     height: 80px;  
     text-align: center;
     font-family: 'Baloo 2', cursive;
-    font-size: 48px;
+    font-size: 45px;
     font-weight: 700;
 }
 .day-card{
     background-color: #ABDFF1;
 }
 
+.logo{
+    height: 45px;
+    width: 45px;
+}
 
 /* Styling weather cards for small screens */
 .card {
@@ -67,21 +71,7 @@ font-weight: 400;
     margin: 0;
     padding: 0;
 }    
-.selection-box{
-    font-family: 'Baloo 2', cursive;
-    color: #0C4A60;
-    font-weight: 500;
-    border-radius: 5px;
-    border: 2px solid;
-    border-color: #0C4A60;
-}   
 
-#forecast{
-    background-color: #EF6C33;
-    border-radius: 8px;
-    border: 2px solid;
-    border-color: #0C4A60;
-}
 
 .pac-card {
     margin: 10px 10px 0 0;
@@ -106,4 +96,29 @@ font-weight: 400;
 #pac-input:focus {
     border-color: #4d90fe;
 }
-  
+  .selection-box{
+    font-family: 'Baloo 2', cursive;
+    color: #0C4A60;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: #0C4A60;
+}   
+
+#forecast{
+    background-color: #EF6C33;
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: #0C4A60;
+}
+#source{
+    background-color: #EF6C33;
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: #0C4A60;
+}
+#latlong{
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: #0C4A60;
+}
