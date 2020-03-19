@@ -5,16 +5,19 @@ A new input object is the created using the inputBuilder() Function, a new weath
 document.addEventListener("DOMContentLoaded", function () {
    
     $("#forecast").click(function () {
+        let location = $("#lat-long").val();
+        let input = new inputBuilder(location);
+        console.log(typeof(location))
+        if (location == '') {
+            $('#warning-modal').modal('show');
+            console.log('hejhopp')
+        /* }else if (type(location) == ) { */
 
-        if ($("#source").children("option:selected").val() == 1) {
-            var location = $("#lat-long").val();
-            var input = new inputBuilder(location);
-            var worldWeatherOnlineData = new weatherDataMatrix;
+        } else if ($("#source").children("option:selected").val() == 1) {
+            let worldWeatherOnlineData = new weatherDataMatrix;
             JSONP_MarineWeather(input, worldWeatherOnlineData);
 
         } else if ($("#source").children("option:selected").val() == 2) {
-            var location = $("#lat-long").val();
-            var input = new inputBuilder(location);
             var openWeatherData = new weatherDataMatrix;
             JSONP_openWeather(input, openWeatherData);
         };
@@ -22,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/*function to build request input */
+/*function to build request input 
+Input: place, Latitude and longitude in lat,lng format ex: 35.40,2.33 */
 function inputBuilder(place) {
     this.query = place;
     this.format = "json";

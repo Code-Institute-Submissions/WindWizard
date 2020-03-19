@@ -28,6 +28,8 @@ function initMap() {
     // their parent base map.
     map.overlayMapTypes.insertAt(
         0, new CoordMapType(new google.maps.Size(256, 256)));
+
+        
     // Function that responds to a click on the map by filling out the lat,long seacrh field with corresponding coordinates
     map.addListener('click', function (e) {
         $('#lat-long').val(e.latLng.lat() + "," + e.latLng.lng());
