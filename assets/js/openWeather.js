@@ -1,7 +1,7 @@
 const openweather_baseurl = "https://api.openweathermap.org/data/2.5/"
 /* Function that assembles the api call url and calls the jsonP1 function */
 function JSONP_openWeather(input, dataObject) {
-    var url = openweather_baseurl + "forecast?lat=" + input.lat + "&lon=" + input.long + "&appid=" + owkey;
+    var url = openweather_baseurl + "forecast?lat=" + input.lat + "&lon=" + input.long + "&appid=" + OpenWeatherKey;
     jsonP1(url, input.callback, dataObject);
 }
 

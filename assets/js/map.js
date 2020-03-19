@@ -6,7 +6,7 @@ function CoordMapType(tileSize) {
 // as a backgroundimage to a div that can later be layered ontop of map tiles
 CoordMapType.prototype.getTile = function (coord, zoom, ownerDocument) {
     var div = ownerDocument.createElement('div');
-    var windurl = "https://tile.openweathermap.org/map/wind_new/" + zoom + "/" + coord.x + "/" + coord.y + ".png?appid=" + owkey;
+    var windurl = "https://tile.openweathermap.org/map/wind_new/" + zoom + "/" + coord.x + "/" + coord.y + ".png?appid=" + OpenWeatherKey;
     div.style.width = this.tileSize.width + 'px';
     div.style.height = this.tileSize.height + 'px';
     div.style.backgroundImage = "url('" + windurl + "')";

@@ -1,7 +1,7 @@
 const baseURL = 'https://api.worldweatheronline.com/premium/v1/';
 /* Function that assembles the api call url and calls the jsonP function */
 function JSONP_MarineWeather(input, dataObject) {
-    var url = baseURL + "marine.ashx?q=" + input.query + "&format=" + input.format + "&key=" + wwokey;
+    var url = baseURL + "marine.ashx?q=" + input.query + "&format=" + input.format + "&key=" + WorldWeatherOnlineKey;
     jsonP(url, input.callback, dataObject);
 }
 /* Function to sort recived data into a weatherdatamatrix object.
