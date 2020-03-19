@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#forecast").click(function () {
         let location = $("#lat-long").val();
         let input = new inputBuilder(location);
-        console.log(typeof(location))
-        if (location == '') {
+        // If lat-long input does not match the regular expression below, a modal pops up saying the input is wrong
+        if  (!(/^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/.test(location))) {
             $('#warning-modal').modal('show');
-            console.log('hejhopp')
-        /* }else if (type(location) == ) { */
 
         } else if ($("#source").children("option:selected").val() == 1) {
             let worldWeatherOnlineData = new weatherDataMatrix;
