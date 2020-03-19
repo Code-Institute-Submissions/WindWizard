@@ -11,8 +11,9 @@ body {
 }
 
 .heading-box {
-    background-color: #ABDFF1;
-    color: #0C4A60;
+    background-color: rgb(6,27,32, 0.9);
+    padding-top: 10px;
+    color: #EF6C33;
     height: 80px;
     text-align: center;
     font-family: 'Baloo 2', cursive;
@@ -30,7 +31,7 @@ body {
 }
 
 .day-container .day-card {
-    background-color: #ABDFF1;
+   background-color: rgb(119, 147, 149, 0.8);
 }
 
 .logo {
@@ -52,13 +53,13 @@ body {
 .card-header {
     margin: auto;
     font-weight: 600;
-    background-color: inherit;
+    background-color: rgb(225, 221, 219, 0.0);
     border-bottom: 0px;
 }
 
 .card-body {
     padding: 0;
-    background-color: rgb(225, 221, 219, 0.7);
+    background-color: rgb(225, 221, 219, 0.8);
 }
 
 .weather-card-box {
@@ -93,7 +94,6 @@ body {
 
 .day-container {
     margin: 0;
-
     padding-top: 10px;
 
 }
@@ -131,7 +131,7 @@ body {
     border-radius: 5px;
     border: 2px solid;
     border-color: #0C4A60;
-    background-color: rgb(225, 221, 219, 0.7);
+    background-color: rgb(225, 221, 219, 0.8);
 }
 
 #forecast {
@@ -152,4 +152,28 @@ body {
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;
+}
+
+/* Modal */
+.modal-dialog {
+    font-family: 'Roboto', sans-serif;
+    border: #0C4A60 solid;
+    border-width: 2px;
+    border-radius: 5px;
+    font-weight: 400;
+    color: #0C4A60;
+    background-color: rgb(225, 221, 219, 0.7);
+}
+.btn{
+    background-color: #EF6C33;
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: #0C4A60;
+}
+.close{
+    color: #EF6C33;
+    opacity: 1;
+}
+.modal-content{
+    background-color: rgb(225, 221, 219, 0.7);
 }

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  <link rel="icon" href="assets/images/shaka.png" type="image/x-icon">
+  <link rel="icon" href="assets/images/shaka_orange.png" type="image/x-icon">
   <script src="assets/js/map.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wM4-2r7MrpRZsGlXT8LgdSC5i--zUvo&libraries=places&callback=initMap">
@@ -19,15 +19,15 @@
 
 <body>
   <div class="col-sm-12 heading-box">
-    WindWizard <img class="logo" src="assets/images/shaka.png" alt="shaka logo">
+    WindWizard <img class="logo" src="assets/images/shaka_orange.png" alt="shaka logo">
   </div>
 
   <section class="container-lg">
-    <div class="info-box">
-      Click the map to get Coordinates for a spot, Or Search for it in the searchbar below.
-    </div>
-    <div class="row">
 
+    <div class="row">
+      <div class="info-box col-md-12">
+        Click the map to get Coordinates for a spot, Or Search for it in the searchbar below.
+      </div>
       <div class="pac-card" id="pac-card">
         <div id="pac-container">
           <input id="pac-input" type="text" placeholder="Enter a location">
@@ -65,7 +65,7 @@
             <p>Please provide input in format : latitude,longitude <br> example: 35.40,2.33 </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
