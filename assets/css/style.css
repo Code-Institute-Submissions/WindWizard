@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+2|Roboto&display=swap');
 body{
-    background-color: #E1DDDB;
+    /* background-color: #E1DDDB; */
+    background: url('../images/ocean.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 }
 .heading-box{
@@ -38,7 +43,7 @@ font-weight: 400;
 }
 .card-body{
     padding: 0;
-    background-color: #E1DDDB;
+    background-color: rgb(225, 221, 219, 0.7);
 }
 .weather-card-box{
     margin: auto;
@@ -67,9 +72,11 @@ font-weight: 400;
     height: 500px;
     padding: 0px;
 }
-.day-conatiner{
+.day-container{
     margin: 0;
-    padding: 0;
+   
+    padding-top: 10px;
+    
 }    
 
 
@@ -96,13 +103,14 @@ font-weight: 400;
 #pac-input:focus {
     border-color: #4d90fe;
 }
-  .selection-box{
+.selection-box{
     font-family: 'Baloo 2', cursive;
     color: #0C4A60;
     font-weight: 500;
     border-radius: 5px;
     border: 2px solid;
     border-color: #0C4A60;
+    background-color:rgb(225, 221, 219, 0.7); 
 }   
 
 #forecast{
