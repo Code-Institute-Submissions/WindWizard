@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+2|Roboto&display=swap');
-body{
+
+body {
     /* background-color: #E1DDDB; */
     background: url('../images/ocean.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -8,76 +9,94 @@ body{
     background-size: cover;
 
 }
-.heading-box{
+
+.heading-box {
     background-color: #ABDFF1;
     color: #0C4A60;
-    height: 80px;  
+    height: 80px;
     text-align: center;
     font-family: 'Baloo 2', cursive;
     font-size: 45px;
     font-weight: 700;
 }
-.day-card{
+
+.info-box {
+    background-color: rgb(225, 221, 219, 0.7);
+    font-family: 'Roboto', sans-serif;
+    border: #0C4A60 solid;
+    border-width: 2px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.day-container .day-card {
     background-color: #ABDFF1;
 }
 
-.logo{
+.logo {
     height: 45px;
     width: 45px;
 }
 
 /* Styling weather cards for small screens */
 .card {
-font-family: 'Roboto', sans-serif;
-min-width:320px;
-border: #0C4A60 solid;
-border-width: 2px;
-border-radius: 5px;
-font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    min-width: 320px;
+    border: #0C4A60 solid;
+    border-width: 2px;
+    border-radius: 5px;
+    font-weight: 400;
+    background-color: rgb(225, 221, 219, 0.0);
 }
-.card-header{
+
+.card-header {
     margin: auto;
     font-weight: 600;
     background-color: inherit;
     border-bottom: 0px;
 }
-.card-body{
+
+.card-body {
     padding: 0;
     background-color: rgb(225, 221, 219, 0.7);
 }
-.weather-card-box{
+
+.weather-card-box {
     margin: auto;
     font-weight: 500px;
 }
 
-.time-box{
+.time-box {
     min-width: 35px;
 }
 
-.wind-dir-box{
+.wind-dir-box {
     min-width: 26px;
 }
 
-.weather-decription-box{
+.weather-decription-box {
     margin: auto;
 }
-.weather-icon{
+
+.weather-icon {
     height: 40px;
     width: 40px;
 }
-#map-div{
+
+#map-div {
     border: 5px solid;
     border-color: #0C4A60;
     border-radius: 10px;
     height: 500px;
     padding: 0px;
 }
-.day-container{
+
+.day-container {
     margin: 0;
-   
+
     padding-top: 10px;
-    
-}    
+
+}
 
 
 .pac-card {
@@ -88,8 +107,9 @@ font-weight: 400;
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
-    
+
 }
+
 #pac-input {
     background-color: #fff;
     font-family: Roboto;
@@ -99,33 +119,36 @@ font-weight: 400;
     text-overflow: ellipsis;
     width: 270px;
 }
-  
+
 #pac-input:focus {
     border-color: #4d90fe;
 }
-.selection-box{
+
+.selection-box {
     font-family: 'Baloo 2', cursive;
     color: #0C4A60;
     font-weight: 500;
     border-radius: 5px;
     border: 2px solid;
     border-color: #0C4A60;
-    background-color:rgb(225, 221, 219, 0.7); 
-}   
+    background-color: rgb(225, 221, 219, 0.7);
+}
 
-#forecast{
+#forecast {
     background-color: #EF6C33;
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;
 }
-#source{
+
+#source {
     background-color: #EF6C33;
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;
 }
-#latlong{
+
+#latlong {
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;

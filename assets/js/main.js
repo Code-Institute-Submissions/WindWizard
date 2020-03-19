@@ -1,11 +1,11 @@
 /* the main piece of code running the site,
 When the Get Forecast button is clicked, the latitude, longitude in the imputfied is read, and saved as location, 
 A new input object is the created using the inputBuilder() Function, a new weatherDataMatrix is created to recive the forecast data,
- and is the passed along to the chain of functions used to call and handle the data from the selected api*/ 
-document.addEventListener("DOMContentLoaded", function () { 
-
+ and is the passed along to the chain of functions used to call and handle the data from the selected api*/
+document.addEventListener("DOMContentLoaded", function () {
+   
     $("#forecast").click(function () {
-        
+
         if ($("#source").children("option:selected").val() == 1) {
             var location = $("#lat-long").val();
             var input = new inputBuilder(location);
@@ -48,11 +48,11 @@ function weatherDataMatrix() {
         ['day', 'time', 'temp', 'weather-description', 'precipitation', 'windspeed', 'wind-degree', 'wind-gust', 'swell-height', 'water-temp', 'imgurl']
     ];
     this.cards = "";
-    
+
     this.add = function (day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp, imgurl) {
         this.data.push([day, time, temp, weatherDescription, precipitation, windSpeed, windDegree, windGust, swellHeight, waterTemp, imgurl]);
     };
-    
+
     this.display = function () {
         document.getElementById("card-container").innerHTML = this.cards;
 
@@ -90,7 +90,7 @@ function weatherDataMatrix() {
                 </div>
             </div>`;
         };
-        this.cards += `</div>`; 
+        this.cards += `</div>`;
     };
-    
+
 };
