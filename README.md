@@ -42,10 +42,10 @@ for bigger screens these same cards are displyed in multiple columns.
 ## Features:
 The site featurs one single page with
 - Latitude, longitude seachbar, wich can be filled in by clicking the map, or providing your own memorised data. The input of the searchbar is checked with a regular expression to make sure it matches correct coordinate format.
-- Dropdown menu: where the source of the forecast can be selected. Default is (WorldWeatherOnline)[https://www.worldweatheronline.com/] api, and currently one more option exists:
-(OpenWeather)[https://openweathermap.org/].
+- Dropdown menu: where the source of the forecast can be selected. Default is [WorldWeatherOnline](https://www.worldweatheronline.com/) api, and currently one more option exists:
+[OpenWeather](https://openweathermap.org/).
 - Button: Get Forecast, A button that sets of a call the selected api and displays it to the page.
-- Google Maps with  wind-data from (OpenWeather)[https://openweathermap.org/] api. The url for the OpenWeather api is assembled from (tile coordinates)[https://developers.google.com/maps/documentation/javascript/coordinates] an image is than recived and placed ontop of the corresponding map tile. This provides a cool visual effect and also give a general picture of the weathersytems currently at work. The map can be clicked, and from that click the Latitude, Longitude Searchbar is filled out so that it is easy to get data for places that are not seacheable on google, (certain beaches or surfspots.)
+- Google Maps with  wind-data from [OpenWeather](https://openweathermap.org/) api. The url for the OpenWeather api is assembled from [tile coordinates](https://developers.google.com/maps/documentation/javascript/coordinates) an image is than recived and placed ontop of the corresponding map tile. This provides a cool visual effect and also give a general picture of the weathersytems currently at work. The map can be clicked, and from that click the Latitude, Longitude Searchbar is filled out so that it is easy to get data for places that are not seacheable on google, (certain beaches or surfspots.)
 - Google places Autocorrect searchbar where a user can search for a place, and one a place is chosen, the map centers and zooms on that place and the Forecast of the chosen source is displayed underneath.
 - Cards that are displayed with the forecast once it has been requested from the api.
 
@@ -56,8 +56,13 @@ The site featurs one single page with
 - Add pins to the map for famous spots all around the world would help new surfers find spots to go to aswell as providing an easier way to find you favorite spot.
 - Add Feature where the user can drop a pin to the map and then get a small info window with the current weather conditions and a button to get forecast.
 
-## APIS:
-#### World Weather Online
+## Technologies used
+### APIS:
 #### Open Weather
-Open weather is a weather api that offers 500 calls to thier basic apis for free.
-(Main site)[https://openweathermap.org/]
+Open weather is a weather api that offers 500 calls to thier basic apis for free. [https://openweathermap.org/](https://openweathermap.org/) This api is used to get forecast as well as the windlayer ontop of google maps.
+
+#### World Weather Online
+World Weater online is a weather api with a marine weather section that offers a free trial premium membership.
+
+#### Google Maps For Javascript
+

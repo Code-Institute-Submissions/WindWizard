@@ -17,17 +17,17 @@ function sortOpenWeatherData(weather, dataObject) {
         if (weather[i].hasOwnProperty('rain') == true) {
             dataObject.add(weather[i].valueOf().dt_txt.split(" ")[0], weather[i].valueOf().dt_txt.split(" ")[1].split(":")[0], Math.round(weather[i].valueOf().main.temp - 273),
                 weather[i].valueOf().weather[0].description, weather[i].rain["3h"], weather[i].valueOf().wind.speed, weather[i].wind.valueOf().deg,
-                "no data", "no data", "no data", "http://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
+                "no data", "no data", "no data", "https://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
 
         } else if (weather[i].hasOwnProperty('snow') == true) {
             dataObject.add(weather[i].valueOf().dt_txt.split(" ")[0], weather[i].valueOf().dt_txt.split(" ")[1].split(":")[0], Math.round(weather[i].valueOf().main.temp - 273),
                 weather[i].valueOf().weather[0].description, weather[i].snow["3h"], weather[i].valueOf().wind.speed, weather[i].wind.valueOf().deg,
-                "no data", "no data", "no data", "http://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
+                "no data", "no data", "no data", "https://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
 
         } else {
             dataObject.add(weather[i].valueOf().dt_txt.split(" ")[0], weather[i].valueOf().dt_txt.split(" ")[1].split(":")[0], Math.round(weather[i].valueOf().main.temp - 273),
                 weather[0].valueOf().weather[0].description, "0", weather[i].valueOf().wind.speed, weather[i].valueOf().wind.deg,
-                "no data", "no data", "no data", "http://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
+                "no data", "no data", "no data", "https://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
         };
     };
 }
