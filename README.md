@@ -6,16 +6,16 @@ so there may be shortcuts to a working page that will be overlooked in the intre
 The goal of this project then, is to build a site that looks good and allows the user to check out weatherdata from multiple sources.
 The data will be collected using apis and displayed to the page.
 
-Buisniss goals of the site:
+## Buisniss goals of the site:
 
 * At this point none existant. Adds could possibly be added to the site in the future.
 
-Visitor goals of the site:
+## Visitor goals of the site:
 
 * Get weather forcast for a surfspot.
 * Look up multiple spots to decide on where to go.
 
-# UX
+## UX
 
 Visitors of the site:
 The main category of visitors of this site are surfers who are looking to go surfing in the coming days.
@@ -25,7 +25,8 @@ As a visitor of the site, I want to look up the forecast from multiple sources t
 As a visitor of the site, i want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best.
 
 ## Wireframe Mockups:
-[About](https://github.com/jourm/Monocide/tree/master/assets/images/mockups/about.wireframes.png)
+[Wireframe for Mobile view](https://github.com/jourm/WindWizard/blob/master/assets/images/wireframes/MobileWireframe.PNG)
+[Wireframe for Desktop view](https://github.com/jourm/WindWizard/blob/master/assets/images/wireframes/FullscreenWireframe.PNG)
 ## Design Choices:
 
 #### Fonts
@@ -119,6 +120,7 @@ This project uses World Weahter online as a source of weather forecast.
 
 #### Testing of user stories
 * As a visitor of the site, I want to look up the forcast of my local spot to see if the conditions are right for me to surf. A visitor with this agenda can click their spot on the map, search for it in the searchbar or add the cordinates directtly into the latiude,longitude seachbox. The forecast is then displayed beneath the map.
+
 * As a visitor of the site, I want to look up the forecast from multiple sources to be more certain of the conditions.
 * As a visitor of the site, i want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best.
 
