@@ -16,7 +16,7 @@ function sortWorldWeatherOnlineData(weather, dataObject) {
         for (j = 0; j < weather[i].hourly.length; j++) {
             dataObject.add(weather[i].date, weather[i].hourly[j].time, weather[i].hourly[j].tempC, weather[i].hourly[j].weatherDesc[0].value,
                 weather[i].hourly[j].precipMM, Math.round(weather[i].hourly[j].windspeedKmph / 3.6), weather[i].hourly[j].winddirDegree, Math.round(weather[i].hourly[j].WindGustKmph / 3.6),
-                weather[i].hourly[j].swellHeight_m, weather[i].hourly[j].waterTemp_C, weather[i].hourly[j].weatherIconUrl[0].value);
+                weather[i].hourly[j].swellHeight_m, weather[i].hourly[j].waterTemp_C, weather[i].hourly[j].weatherIconUrl[0].value.replace("http:", "https:"));
         };
     };
 }
@@ -34,6 +34,7 @@ function jsonP(url, callback, dataObject) {
         dataType: 'jsonp',
         success: function (json) {
             sortWorldWeatherOnlineData(json.data.weather, dataObject);
+
             dataObject.generateCards();
             dataObject.display();
         },
