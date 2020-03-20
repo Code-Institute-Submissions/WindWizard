@@ -55,7 +55,7 @@ for bigger screens these same cards are displayed in multiple columns.
 
 ## Features:
  
-The site features one single page with
+The site features one single page with:
 
 * Latitude, longitude seachbar, which can be filled in by clicking the map, or providing your own memorised data. The input of the search box is checked with a regular expression to make sure it matches correct coordinate format.
 * Dropdown menu: where the source of the forecast can be selected. Default is [WorldWeatherOnline](https://www.worldweatheronline.com/) api, and currently one more option exists: [OpenWeather](https://openweathermap.org/).
@@ -176,3 +176,7 @@ git clone https://github.com/USERNAME/REPOSITORY
 7. Press Enter. Your local clone will be created.
 
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
+
+## Disclaimer
+If someone wants to run this project on thir own it would require them to get thier own API keys for the apis usen in this project.
+The Apis used are all on a free or tutorial based subscription and can be easily set up for anyone. 
