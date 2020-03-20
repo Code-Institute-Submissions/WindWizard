@@ -25,8 +25,10 @@ As a visitor of the site, I want to look up the forecast from multiple sources t
 As a visitor of the site, i want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best.
 
 ## Wireframe Mockups:
+
 [Wireframe for Mobile view](https://github.com/jourm/WindWizard/blob/master/assets/images/wireframes/MobileWireframe.PNG)
 [Wireframe for Desktop view](https://github.com/jourm/WindWizard/blob/master/assets/images/wireframes/FullscreenWireframe.PNG)
+
 ## Design Choices:
 
 #### Fonts
@@ -113,19 +115,31 @@ This project uses World Weahter online as a source of weather forecast.
 ## Testing
 
 #### Testing of code
-- style.css was ran through [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator) with no no errors.
-- index.html was ran through [WC3 Markup Validation service](https://validator.w3.org/) with no errors.
-- worldWeatherOnline.js, openWeather.js, map.js and main.js were ran through [jshint](https://jshint.com/) without major isuses.
+
+* style.css was ran through [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator) with no no errors.
+* index.html was ran through [WC3 Markup Validation service](https://validator.w3.org/) with no errors.
+* worldWeatherOnline.js, openWeather.js, map.js and main.js were ran through [jshint](https://jshint.com/) without major isuses.
+
 #### Manual testing
 
 #### Testing of user stories
-* As a visitor of the site, I want to look up the forcast of my local spot to see if the conditions are right for me to surf. A visitor with this agenda can click their spot on the map, search for it in the searchbar or add the cordinates directtly into the latiude,longitude seachbox. The forecast is then displayed beneath the map.
 
-* As a visitor of the site, I want to look up the forecast from multiple sources to be more certain of the conditions.
-* As a visitor of the site, i want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best.
+* As a visitor of the site, I want to look up the forcast of my local spot to see if the conditions are right for me to surf. A visitor with this agenda can click their spot on the map, search for it in the searchbar or add the cordinates directtly into the latiude, longitude seachbox. The forecast is then displayed beneath the map.
+
+![screenshot user story1](https://github.com/jourm/Monocide/blob/master/assets/images/screenshots/user-story.information.PNG)
+
+* As a visitor of the site, I want to look up the forecast from multiple sources to be more certain of the conditions. A visitor with this agenda can change forecast source in the dropdown menu marked in the picture below.
+
+![screenshot user story](https://github.com/jourm/Monocide/blob/master/assets/images/screenshots/user-story.information.PNG)
+
+* As a visitor of the site, I want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best. A visitor with this agenda can serach for multiple spots in succession either using the map, searchbar or latitude, longitude search field. This user can also get a better understanding for the curren weather system at play in their region by looking at a zommed out part of the map where the wind layer shows how the weathersystem looks.
+
+![screenshot user story](https://github.com/jourm/Monocide/blob/master/assets/images/screenshots/user-story.information.PNG)
 
 #### Bugs Discoverd
+
 During testing issues where discovered: 
+
 * Color of elements not being displayed properly in Microsoft Edge. Was fixed by changing rgb() to rgba() in the styilng of the affected elements.
 * Input in latitude, longitude inputfield can be any string. Was fixed by adding a if statment to check if the input matches a "regular expression" that will fit any legitimate coordinate from -90, -180 to 90, 180.
 * Google maps api callback had an issue where it would produce an error about oncve every 20 times the page was loaded. After some seacrhing on the web this was determined to be a inherit fault in the api and a workaround where the callback is removed and the map is initiated form main.js when the content of the dom is loaded.
@@ -133,5 +147,4 @@ During testing issues where discovered:
 * Minor spelling and unit errors were found and corrected in style.css when running through [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator).
 * Once hosted on github a warning where the site loads icons using http istead of hhtps was discovered, this was solved by changeing the url delivered byt the apis using url.replace("http:", "https:")
 * During testing in jshint a few parethesies were found to be missing after constructor functuions aw well as a couple of unneccary semicolons, this was easily rectified.
-
 
