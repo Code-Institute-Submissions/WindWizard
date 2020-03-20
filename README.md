@@ -1,5 +1,8 @@
 # WindWizard
- 
+ <div align="center"> 
+
+[To wiew in github pages](https://jourm.github.io/WindWizard/)
+</div>
 Being a Kitesurfer, I always have 5 different weather apps on my phone, What wind wizard does is collect weather data from multiple sources and allows the user to toggle between different forecasts.
 This is an educational project, learning and improving understanding about working with apis is very important, 
 so there may be shortcuts to a working page that will be overlooked in the interest of understanding and practicing.
@@ -147,4 +150,29 @@ During testing issues were discovered:
 * Minor spelling and unit errors were found and corrected in style.css when running through [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator).
 * Once hosted on github a warning where the site loads icons using http instead of https was discovered, this was solved by changing the url delivered but the apis using url.replace("http:", "https:")
 * During testing in jshint a few parentheses were found to be missing after constructor functions as well as a couple of unnecessary semicolons, this was easily rectified.
+* An issue where Openweather will give an error if to many maptiles a loaded to fast was discovered during manual testing. This is due to the api not allowing unlimited calls to it in a short amount of time and could be fixed by getting a paid premium api key, this will not be done for this project, so the issue remains.
 
+## Deployment 
+This project was pushed to github using git and deployed to GitHub Pages using the following method:
+1. Go to [GitHub repository](https://github.com/jourm/WindWizard)
+2. Under the repository name in the top right, click Settings.
+3. Scroll down to GitHub Pages.
+4. Under Source, click the dropdown menu and select Master Branch.
+5. The site is then published at https://jourm.github.io/WindWizard/.
+
+[comment]: <> (The following section was copied from https://raw.githubusercontent.com/AJGreaves/picflip/master/README.md since it is almost impossible to write theese instructions with different words without making it harder to follow.)
+## How to run this project locally
+
+To clone this project from GitHub:
+1. Go to [GitHub repository](https://github.com/jourm/WindWizard)
+2. Under the repository name, click "Clone or download".
+3. In the Clone with HTTPs section, copy the clone URL for the repository. 
+4. In your local IDE open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type ```git clone```, and then paste the URL you copied in Step 3.
+```console
+git clone https://github.com/USERNAME/REPOSITORY
+```
+7. Press Enter. Your local clone will be created.
+
+Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
