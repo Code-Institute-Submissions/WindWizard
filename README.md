@@ -126,15 +126,15 @@ This project uses World Weahter online as a source of weather forecast.
 
 * As a visitor of the site, I want to look up the forcast of my local spot to see if the conditions are right for me to surf. A visitor with this agenda can click their spot on the map, search for it in the searchbar or add the cordinates directtly into the latiude, longitude seachbox. The forecast is then displayed beneath the map.
 
-![screenshot user story1](https://github.com/jourm/Monocide/blob/master/assets/images/screenshots/user-story.information.PNG)
+![screenshot user story](https://github.com/jourm/WindWizard/blob/master/assets/images/userstorytesting/UserStory3.PNG)
 
 * As a visitor of the site, I want to look up the forecast from multiple sources to be more certain of the conditions. A visitor with this agenda can change forecast source in the dropdown menu marked in the picture below.
 
-![screenshot user story](https://github.com/jourm/Monocide/blob/master/assets/images/screenshots/user-story.information.PNG)
+![screenshot user story](https://github.com/jourm/WindWizard/blob/master/assets/images/userstorytesting/UserStory2.PNG)
 
 * As a visitor of the site, I want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best. A visitor with this agenda can serach for multiple spots in succession either using the map, searchbar or latitude, longitude search field. This user can also get a better understanding for the curren weather system at play in their region by looking at a zommed out part of the map where the wind layer shows how the weathersystem looks.
 
-![screenshot user story](https://github.com/jourm/Monocide/blob/master/assets/images/screenshots/user-story.information.PNG)
+![screenshot user story](https://github.com/jourm/WindWizard/blob/master/assets/images/userstorytesting/UserStory4.PNG)
 
 #### Bugs Discoverd
 
