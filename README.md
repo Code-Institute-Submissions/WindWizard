@@ -24,6 +24,8 @@ As a visitor of the site, I want to look up the forcast of my local spot to see 
 As a visitor of the site, I want to look up the forecast from multiple sources to be more certain of the conditions.
 As a visitor of the site, i want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best.
 
+## Wireframe Mockups:
+[About](https://github.com/jourm/Monocide/tree/master/assets/images/mockups/about.wireframes.png)
 ## Design Choices:
 
 #### Fonts
@@ -61,7 +63,7 @@ The site featurs one single page with
 
 * Add more Api sorces for forecasts. Having a few more sources would completely remove the need to use other sites.
 * Add favorite section, where previously searched locations get saved as a cookie and can diplayed. Since many surfers have one or a couple of good spots nearby, it would be usefull for the user to directly be able to get the forecast for their favorite spots so that they can choose where to go.
-* Add Current weather sections, where users can get live uppdates on what thw conditions currently are like at their favorite spots.
+* Add Current weather sections, where users can get live uppdates on what the conditions currently are like at their favorite spots.
 * Add pins to the map for famous spots all around the world would help new surfers find spots to go to aswell as providing an easier way to find you favorite spot.
 * Add Feature where the user can drop a pin to the map and then get a small info window with the current weather conditions and a button to get forecast.
 
@@ -117,7 +119,8 @@ This project uses World Weahter online as a source of weather forecast.
 
 #### Testing of user stories
 * As a visitor of the site, I want to look up the forcast of my local spot to see if the conditions are right for me to surf. A visitor with this agenda can click their spot on the map, search for it in the searchbar or add the cordinates directtly into the latiude,longitude seachbox. The forecast is then displayed beneath the map.
-
+* As a visitor of the site, I want to look up the forecast from multiple sources to be more certain of the conditions.
+* As a visitor of the site, i want to look up the forecast for multiple spots around my home so i can se where the conditions are going to be the best.
 
 #### Bugs Discoverd
 During testing issues where discovered: 
