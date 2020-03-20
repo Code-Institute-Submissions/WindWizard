@@ -57,16 +57,15 @@ function initMap() {
         }
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
+        let location = place.geometry.location.lat() + "," + place.geometry.location.lng();
+        let input = new inputBuilder(location);
+
         if ($("#source").children("option:selected").val() == 1) {
-            var worldWeatherOnlineData = new weatherDataMatrix;
-            var location = place.geometry.location.lat() + "," + place.geometry.location.lng();
-            var input = new inputBuilder(location);
+            let worldWeatherOnlineData = new weatherDataMatrix();
             JSONP_MarineWeather(input, worldWeatherOnlineData);
 
         } else if ($("#source").children("option:selected").val() == 2) {
-            var openWeatherData = new weatherDataMatrix;
-            var location = place.geometry.location.lat() + "," + place.geometry.location.lng();
-            var input = new inputBuilder(location);
+            let openWeatherData = new weatherDataMatrix();
             JSONP_openWeather(input, openWeatherData);
         };
     });

@@ -8,7 +8,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
   <link rel="icon" href="assets/images/shaka_orange.png" type="image/x-icon">
-  <script src="assets/js/map.js"></script>
+  
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wM4-2r7MrpRZsGlXT8LgdSC5i--zUvo&libraries=places">
   </script>
@@ -37,7 +37,7 @@
 
       </div>
       <div class="col-sm-12 selection-box">
-        <label for="spot">Latitude,Longitude</label>
+        <label for="lat-long">Latitude,Longitude</label>
         <input type="text" id="lat-long" name="spot" placeholder="Lat,Long" required
           class="col-sx-11 col-md-6 col-lg-3">
         <select id="source">
@@ -71,6 +71,7 @@
       </div>
     </div>
   </section>
+  <script src="assets/js/map.js"></script>
   <script src="assets/js/encryptedkeys.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/worldWeatherOnline.js"></script>

@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+2|Roboto&display=swap');
 
 body {
-    /* background-color: #E1DDDB; */
     background: url('../images/ocean.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
 }
 
@@ -30,16 +25,17 @@ body {
     font-weight: 400;
 }
 
-.day-container .day-card {
-   background-color: rgba(119, 147, 149, 0.8);
-}
+
 
 .logo {
     height: 45px;
     width: 45px;
 }
+/* cards for displaying forecast */
 
-/* Styling weather cards for small screens */
+.day-container .day-card {
+   background-color: rgba(119, 147, 149, 0.8);
+}
 .card {
     font-family: 'Roboto', sans-serif;
     min-width: 320px;
@@ -64,7 +60,7 @@ body {
 
 .weather-card-box {
     margin: auto;
-    font-weight: 500px;
+    font-weight: 500;
 }
 
 .time-box {
@@ -84,6 +80,13 @@ body {
     width: 40px;
 }
 
+.day-container {
+    margin: 0;
+    padding-top: 10px;
+
+}
+
+/* google maps */
 #map-div {
     border: 5px solid;
     border-color: #0C4A60;
@@ -91,13 +94,6 @@ body {
     height: 500px;
     padding: 0px;
 }
-
-.day-container {
-    margin: 0;
-    padding-top: 10px;
-
-}
-
 
 .pac-card {
     margin: 10px 10px 0 0;
@@ -115,7 +111,7 @@ body {
     font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
-    padding: 5 11px 0 13px;
+    padding: 5px 11px 0px 13px;
     text-overflow: ellipsis;
     width: 270px;
 }
@@ -123,11 +119,12 @@ body {
 #pac-input:focus {
     border-color: #4d90fe;
 }
+/* Box with seacrh etc */
 
 .selection-box {
     font-family: 'Baloo 2', cursive;
     color: #0C4A60;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 5px;
     border: 2px solid;
     border-color: #0C4A60;
@@ -139,6 +136,9 @@ body {
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;
+    font-weight: 600;
+    color: inherit;
+    margin-bottom: 5px;
 }
 
 #source {
@@ -146,12 +146,16 @@ body {
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;
+    font-weight: 600;
+    color: inherit;
+    margin-top: 5px;
 }
 
 #latlong {
     border-radius: 8px;
     border: 2px solid;
     border-color: #0C4A60;
+    font-weight: 600;
 }
 
 /* Modal */
