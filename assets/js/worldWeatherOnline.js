@@ -17,8 +17,8 @@ function sortWorldWeatherOnlineData(weather, dataObject) {
             dataObject.add(weather[i].date, weather[i].hourly[j].time, weather[i].hourly[j].tempC, weather[i].hourly[j].weatherDesc[0].value,
                 weather[i].hourly[j].precipMM, Math.round(weather[i].hourly[j].windspeedKmph / 3.6), weather[i].hourly[j].winddirDegree, Math.round(weather[i].hourly[j].WindGustKmph / 3.6),
                 weather[i].hourly[j].swellHeight_m, weather[i].hourly[j].waterTemp_C, weather[i].hourly[j].weatherIconUrl[0].value.replace("http:", "https:"));
-        };
-    };
+        }
+    }
 }
 
 /* this function is based on example in WWO documentation and then modified to 
@@ -39,7 +39,7 @@ function jsonP(url, callback, dataObject) {
             dataObject.display();
         },
         error: function (xhr) {
-            var errorMessage = xhr.status + ': ' + xhr.statusText
+            var errorMessage = xhr.status + ': ' + xhr.statusText;
             alert('Error calling api for weatherforecast' + errorMessage);
         }
     });

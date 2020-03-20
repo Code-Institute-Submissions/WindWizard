@@ -3,7 +3,7 @@ When the Get Forecast button is clicked, the latitude, longitude in the imputfie
 A new input object is the created using the inputBuilder() Function, a new weatherDataMatrix is created to recive the forecast data,
  and is the passed along to the chain of functions used to call and handle the data from the selected api*/
 document.addEventListener("DOMContentLoaded", function () {
-    initMap()
+    initMap();
    
     $("#forecast").click(function () {
         let location = $("#lat-long").val();
@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
             $('#warning-modal').modal('show');
 
         } else if ($("#source").children("option:selected").val() == 1) {
-            let worldWeatherOnlineData = new weatherDataMatrix;
+            let worldWeatherOnlineData = new weatherDataMatrix();
             JSONP_MarineWeather(input, worldWeatherOnlineData);
 
         } else if ($("#source").children("option:selected").val() == 2) {
-            var openWeatherData = new weatherDataMatrix;
+            var openWeatherData = new weatherDataMatrix();
             JSONP_openWeather(input, openWeatherData);
-        };
+        }
 
     });
 });
@@ -33,7 +33,7 @@ function inputBuilder(place) {
     this.callback;
     this.lat = place.split(',')[0];
     this.long = place.split(',')[1];
-};
+}
 
 /* Class to asaseble and store the relevant data that has been picked out from api raw data
 Properties: 
@@ -92,8 +92,8 @@ function weatherDataMatrix() {
                     </div>
                 </div>
             </div>`;
-        };
+        }
         this.cards += `</div>`;
     };
 
-};
+}

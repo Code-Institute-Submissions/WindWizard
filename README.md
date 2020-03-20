@@ -112,7 +112,7 @@ This project uses World Weahter online as a source of weather forecast.
 #### Testing of code
 - style.css was ran through [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator) with no no errors.
 - index.html was ran through [WC3 Markup Validation service](https://validator.w3.org/) with no errors.
-
+- worldWeatherOnline.js, openWeather.js, map.js and main.js were ran through [jshint](https://jshint.com/) without major isuses.
 #### Manual testing
 
 #### Testing of user stories
@@ -127,6 +127,6 @@ During testing issues where discovered:
 * Once the callback had been fixed, an error where sometime google would not be defined when loading the page appeared. This was fixed by loading google maps in the head and maps.js at the bottom of the body.
 * Minor spelling and unit errors were found and corrected in style.css when running through [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator).
 * Once hosted on github a warning where the site loads icons using http istead of hhtps was discovered, this was solved by changeing the url delivered byt the apis using url.replace("http:", "https:")
-* 
+* During testing in jshint a few parethesies were found to be missing after constructor functuions aw well as a couple of unneccary semicolons, this was easily rectified.
 
 

@@ -1,4 +1,4 @@
-const openweather_baseurl = "https://api.openweathermap.org/data/2.5/"
+const openweather_baseurl = "https://api.openweathermap.org/data/2.5/";
 /* Function that assembles the api call url and calls the jsonP1 function */
 function JSONP_openWeather(input, dataObject) {
     var url = openweather_baseurl + "forecast?lat=" + input.lat + "&lon=" + input.long + "&appid=" + OpenWeatherKey;
@@ -28,8 +28,8 @@ function sortOpenWeatherData(weather, dataObject) {
             dataObject.add(weather[i].valueOf().dt_txt.split(" ")[0], weather[i].valueOf().dt_txt.split(" ")[1].split(":")[0], Math.round(weather[i].valueOf().main.temp - 273),
                 weather[0].valueOf().weather[0].description, "0", weather[i].valueOf().wind.speed, weather[i].valueOf().wind.deg,
                 "no data", "no data", "no data", "https://openweathermap.org/img/wn/" + weather[i].weather[0].icon + "@2x.png");
-        };
-    };
+        }
+    }
 }
 /*  this function is based on example in WWO documentation and then modified to 
 call function sortWorldWeatherOnlineData to sort relevant information recived from the api call 
@@ -49,7 +49,7 @@ function jsonP1(url, callback, dataObject) {
             dataObject.display();
         },
         error: function (xhr) {
-            var errorMessage = xhr.status + ': ' + xhr.statusText
+            var errorMessage = xhr.status + ': ' + xhr.statusText;
             alert('Error calling api for weatherforecast' + errorMessage);
         }
 
