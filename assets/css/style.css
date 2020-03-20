@@ -11,7 +11,7 @@ body {
 }
 
 .heading-box {
-    background-color: rgb(6,27,32, 0.9);
+    background-color: rgba(6,27,32, 0.9);
     padding-top: 10px;
     color: #EF6C33;
     height: 80px;
@@ -22,7 +22,7 @@ body {
 }
 
 .info-box {
-    background-color: rgb(225, 221, 219, 0.7);
+    background-color: rgba(225, 221, 219, 0.7);
     font-family: 'Roboto', sans-serif;
     border: #0C4A60 solid;
     border-width: 2px;
@@ -31,7 +31,7 @@ body {
 }
 
 .day-container .day-card {
-   background-color: rgb(119, 147, 149, 0.8);
+   background-color: rgba(119, 147, 149, 0.8);
 }
 
 .logo {
@@ -47,19 +47,19 @@ body {
     border-width: 2px;
     border-radius: 5px;
     font-weight: 400;
-    background-color: rgb(225, 221, 219, 0.0);
+    background-color: rgba(225, 221, 219, 0.0);
 }
 
 .card-header {
     margin: auto;
     font-weight: 600;
-    background-color: rgb(225, 221, 219, 0.0);
+    background-color: rgba(225, 221, 219, 0.0);
     border-bottom: 0px;
 }
 
 .card-body {
     padding: 0;
-    background-color: rgb(225, 221, 219, 0.8);
+    background-color: rgba(225, 221, 219, 0.8);
 }
 
 .weather-card-box {
@@ -131,7 +131,7 @@ body {
     border-radius: 5px;
     border: 2px solid;
     border-color: #0C4A60;
-    background-color: rgb(225, 221, 219, 0.8);
+    background-color: rgba(225, 221, 219, 0.8);
 }
 
 #forecast {
@@ -162,7 +162,7 @@ body {
     border-radius: 5px;
     font-weight: 400;
     color: #0C4A60;
-    background-color: rgb(225, 221, 219, 0.7);
+    background-color: rgba(225, 221, 219, 0.7);
 }
 .btn{
     background-color: #EF6C33;
@@ -175,5 +175,5 @@ body {
     opacity: 1;
 }
 .modal-content{
-    background-color: rgb(225, 221, 219, 0.7);
+    background-color: rgba(225, 221, 219, 0.7);
 }

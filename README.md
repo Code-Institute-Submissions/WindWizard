@@ -29,7 +29,7 @@ As a visitor of the site, i want to look up the forecast for multiple spots arou
 
 #### Background Image
 The site was initially made without a background immage, but it did not provide the playfulness of a site for surfers, it also lacked a modern feel.
-A free Image of a ocean sunset was then chosen from (Pexels)[https://www.pexels.com/search/ocean/] because of its cool balance of colors to use on the page.
+A free Image of a ocean sunset was then chosen from [Pexels](https://www.pexels.com/search/ocean/) because of its cool balance of colors to use on the page.
 
 #### Colors
 The colors used for the site were based of the background image. The water in the image had  colors ranging from black to blue to gray, all somewhat muted colors that look good on a site. The sky in the image has a great orange color that was used as a contrasting color for the logo and the buttons feature on the page.
@@ -57,12 +57,35 @@ The site featurs one single page with
 - Add Feature where the user can drop a pin to the map and then get a small info window with the current weather conditions and a button to get forecast.
 
 ## Technologies used
+This project uses HTML, CSS and JavaScript programming languages.
+
+#### [Visual Studio Code](https://code.visualstudio.com/)
+This project was developed in Visual Studio Code
+#### [Google fonts](https://fonts.google.com/)
+This Project uses fonts from Google fonts.
+#### [JQuery](https://jquery.com/)
+This project uses jquery for DOM manipulation.
+#### [Bootstrap](https://getbootstrap.com/)
+This project uses bootstrap  for its gridsystem and premade classes.
+#### [Pexels](https://www.pexels.com/search/ocean/)
+This project uses Pexels as a free source of images.
+#### [balsamiq Mockups](https://balsamiq.com/wireframes/)
+This project uses basamic mockups 3 for creating wireframes.
 ### APIS:
-#### Open Weather
-Open weather is a weather api that offers 500 calls to thier basic apis for free. [https://openweathermap.org/](https://openweathermap.org/) This api is used to get forecast as well as the windlayer ontop of google maps.
+#### [Open Weather](https://openweathermap.org/)
+This project uses Open weather API as a sorce of weather forecasts and images of winddata to be layerd on top of the map.
+#### [World Weather Online](https://www.worldweatheronline.com/)
+This project uses World Weahter online as a source of weather forecast.
+#### Google Maps For Javascript with Places library 
+- This project uses [Google Maps Javascript api](https://developers.google.com/maps/documentation/javascript/tutorial) to display a interactive map where windinformation can be displayed ontop.
+- This Project uses [Places library](https://developers.google.com/maps/documentation/javascript/places) to handle the fuctionality of an autocorrecting searchbar displayed on the map.
 
-#### World Weather Online
-World Weater online is a weather api with a marine weather section that offers a free trial premium membership.
+## Testing
+#### Testing of code
+#### Manual testing
+#### Testing of user stories
+#### Bugs Discoverd
 
-#### Google Maps For Javascript
+During testing an issue where 
+
 

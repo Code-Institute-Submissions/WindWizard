@@ -3,6 +3,7 @@ When the Get Forecast button is clicked, the latitude, longitude in the imputfie
 A new input object is the created using the inputBuilder() Function, a new weatherDataMatrix is created to recive the forecast data,
  and is the passed along to the chain of functions used to call and handle the data from the selected api*/
 document.addEventListener("DOMContentLoaded", function () {
+    initMap()
    
     $("#forecast").click(function () {
         let location = $("#lat-long").val();
